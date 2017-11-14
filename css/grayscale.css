@@ -41,10 +41,10 @@ a {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  color: #42DCA3; }
+  color: #00A651; }
   a:focus, a:hover {
     text-decoration: none;
-    color: #1d9b6c; }
+    color: #00401f; }
 
 #mainNav {
   font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -174,14 +174,14 @@ a {
   border-radius: 0; }
 
 .btn-default {
-  color: #42DCA3;
-  border: 1px solid #42DCA3;
+  color: #00A651;
+  border: 1px solid #00A651;
   background-color: transparent; }
   .btn-default:focus, .btn-default:hover {
     color: black;
-    border: 1px solid #42DCA3;
+    border: 1px solid #00A651;
     outline: none;
-    background-color: #42DCA3; }
+    background-color: #00A651; }
 
 ul.banner-social-buttons {
   margin-top: 0; }
