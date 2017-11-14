@@ -39,6 +39,77 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
+
+  /////////////////////////////////////////
+
+  // left: 37, up: 38, right: 39, down: 40,
+  // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+  var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+  function preventDefault(e) {
+    e = e || window.event;
+    if (e.preventDefault)
+        e.preventDefault();
+    e.returnValue = false;  
+  }
+
+  function preventDefaultForScrollKeys(e) {
+      if (keys[e.keyCode]) {
+          preventDefault(e);
+          return false;
+      }
+  }
+
+  function disableScroll() {
+    if (window.addEventListener) // older FF
+        window.addEventListener('DOMMouseScroll', preventDefault, false);
+    window.onwheel = preventDefault; // modern standard
+    window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+    window.ontouchmove  = preventDefault; // mobile
+    document.onkeydown  = preventDefaultForScrollKeys;
+  }
+
+  function enableScroll() {
+      if (window.removeEventListener)
+          window.removeEventListener('DOMMouseScroll', preventDefault, false);
+      window.onmousewheel = document.onmousewheel = null; 
+      window.onwheel = null; 
+      window.ontouchmove = null;  
+      document.onkeydown = null;  
+  }
+
+  ///////////////////////////////////////////
+
+  //modal image clicking
+  var modals = ['iconModal', 'logoModal', 'faviconModal', 'spacingModal'];
+  var imgs = ['iconImg', 'logoImg', 'faviconImg', 'spacingImg'];
+  var modalImgs = ['iconModalImg', 'logoModalImg', 'faviconModalImg', 'spacingModalImg'];
+  var captionTexts = ['iconModalCapt', 'logoModalCapt', 'faviconModalCapt', 'spacingModalCapt'];
+  var coseBtns = ['iconModalClose', 'logoModalClose', 'faviconModalClose', 'spacingModalClose'];
+  for(var i = 0; i < modals.length; i++) {
+    // Get the modal
+    var modal = document.getElementById(modals[i]);
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById(imgs[i]);
+    var modalImg = document.getElementById(modalImgs[i]);
+    var captionText = document.getElementById(captionTexts[i]);
+    img.onclick = function(){
+      disableScroll();
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+    // Get the <span> element that closes the modal
+    var span = document.getElementById(coseBtns[i]);
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      enableScroll();
+      modal.style.display = "none";
+    }
+  }
+
+
 })(jQuery); // End of use strict
 
 // Google Maps Scripts

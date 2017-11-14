@@ -38,13 +38,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">01. Logo and Usage</a>
+              <a class="nav-link js-scroll-trigger" href="#about">Logo and Usage</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#download">02. Typeography</a>
+              <a class="nav-link js-scroll-trigger" href="#download">Typeography</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">03. Colours</a>
+              <a class="nav-link js-scroll-trigger" href="#contact">Colours</a>
             </li>
           </ul>
         </div>
@@ -85,9 +85,30 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><img id="IconImg" src="img/1 nt.png" alt="Image Header"></td>
-                  <td><img id="LogotypeImg" src="img/2 nt.png" alt="Image Header"></td>
-                  <td><img id="FaviconImg" src="img/3 nt.png" alt="Image Header"></td>
+                  <td>
+                    <img class="modalImg" id="iconImg" src="img/1 nt.png" alt="Caption Text">
+                    <div id="iconModal" class="tbModal">
+                      <span id="iconModalClose" class="close">&times;</span>
+                      <img class="modal-content" id="iconModalImg">
+                      <div class="modalCaption" id="iconModalCapt"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <img class="modalImg" id="logoImg" src="img/2 nt.png" alt="Caption Text">
+                    <div id="logoModal" class="tbModal">
+                      <span id="logoModalClose" class="close">&times;</span>
+                      <img class="modal-content" id="logoModalImg">
+                      <div class="modalCaption" id="logoModalCapt"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <img class="modalImg" id="faviconImg" src="img/3 nt.png" alt="Caption Text">
+                    <div id="faviconModal" class="tbModal">
+                      <span id="faviconModalClose" class="close">&times;</span>
+                      <img class="modal-content" id="faviconModalImg">
+                      <div class="modalCaption" id="faviconModalCapt"></div>
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -95,7 +116,14 @@
             <table>
               <tr>
                 <th>Logo spacing</th>
-                <td><img id="SpacingImg" src="img/4 nt.png" alt="Image Header"></td>
+                <td style="position: relative; left: 20%;">
+                  <img class="modalImg" id="spacingImg" src="img/4 wt.png" alt="Image Header" style="background-color: #FFF;">
+                  <div id="spacingModal" class="tbModal">
+                    <span id="spacingModalClose" class="close">&times;</span>
+                    <img class="modal-content" id="spacingModalImg">
+                    <div class="modalCaption" id="spacingModalCapt"></div>
+                  </div>
+              </td>
               </tr>
             </table>
           </div>
@@ -107,7 +135,7 @@
     <section id="download" class="download-section content-section text-center">
       <div class="container">
         <div class="col-lg-8 mx-auto">
-          <h2>Download Grayscale</h2>
+          <h2>Typeography</h2>
           <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
           <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
         </div>
@@ -119,7 +147,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2>Contact Start Bootstrap</h2>
+            <h2>Colours</h2>
             <p>Feel free to leave us a comment on the
               <a href="http://startbootstrap.com/template-overviews/grayscale/">Grayscale template overview page</a>
               on Start Bootstrap to give some feedback about this theme!</p>
@@ -153,9 +181,6 @@
 
     <!-- Footer -->
     <footer>
-      <div class="container text-center">
-        <p>Copyright &copy; Your Website 2017</p>
-      </div>
     </footer>
 
     <!-- Bootstrap core JavaScript -->
@@ -169,7 +194,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/grayscale.min.js"></script>
+    <script src="js/grayscale.js"></script>
     <!-- Hopefullly override min with non min -->
     <!-- <script src="js/grayscale.js"></script> -->
 
