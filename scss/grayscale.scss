@@ -1,5 +1,10 @@
 @import 'variables.scss';
 @import 'mixins.scss';
+
+div::-webkit-scrollbar { 
+  width: 0 !important; 
+}
+
 body {
   font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
